@@ -11,8 +11,7 @@ fi
 
 wal -i $1
 
-xrdb -edit ~/.config/.Xresources
-rm ~/.config/.Xresources.bak
+xrdb -edit ~/dotfiles/.config/X11/Xresources
 
 #TODO: implement something that changes the dwm border xresources:
 #	dwm.normborder -> color1

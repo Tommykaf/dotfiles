@@ -4,13 +4,13 @@
 setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,il
 
 # feh set background
-~/.config/scripts/startup-scripts/.fehbg
+~/dotfiles/.config/scripts/startup-scripts/.fehbg
 
 # picom
 picom -b
 
 # Xresources
-xrdb -load ~/.config/X11/Xresources
+xrdb -load ~/dotfiles/.config/X11/Xresources
 
 # In case there is another monitor
-~/.config/scripts/startup-scripts/.xrandr-second-monitor
+~/dotfiles/.config/scripts/startup-scripts/.xrandr-second-monitor

@@ -1,5 +1,5 @@
 #!/bin/sh
-~/.config/.xprofile
+~/dotfiles/.config/X11/xprofile
 
 dwmblocks & wmname LG3D # Java programs need this to work
 exec dwm

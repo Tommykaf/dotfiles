@@ -1,2 +1,2 @@
 #!/bin/sh
-~/.config/X11/xinitrc
+~/dotfiles/.config/X11/xinitrc

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/tommy/.config/wallpapers/Buzz.png' 
+feh --no-fehbg --bg-fill ~/dotfiles/.config/wallpapers/Buzz.png 
