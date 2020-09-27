@@ -1,0 +1,21 @@
+.config/Bitwarden/
+.config/BraveSoftware/
+.config/Code - OSS/
+.config/GIMP/
+.config/LyX/
+.config/QtProject.conf
+.config/binwalk/
+.config/coc/
+.config/configstore/
+.config/dconf/
+.config/discord/
+.config/git/
+.config/inkscape/
+.config/nvim/.netrwhist
+.config/pulse/
+.config/spicetify/Backup/
+.config/spicetify/CustomApps/
+.config/spicetify/Extensions/
+.config/spicetify/Extracted/
+.config/spotify/
+.config/wal/
