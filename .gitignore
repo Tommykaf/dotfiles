@@ -18,4 +18,5 @@
 .config/spicetify/Extensions/
 .config/spicetify/Extracted/
 .config/spotify/
+.config/zsh/.zcompdump*
 .config/wal/
