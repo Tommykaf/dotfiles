@@ -1,0 +1,11 @@
+#!/bin/sh
+
+vol="$(pamixer --default-source --get-volume)"
+
+if [ $(pamixer --default-source --get-mute) = true ]; then
+    icon=""
+else
+    icon=""
+fi
+
+echo "$vol% $icon"

@@ -1,0 +1,115 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.7
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+
+"xbindkeys_show" 
+  control+shift+q
+
+# SIGNALS ARE SENT TO DWMBLOCKS FOR UPDATES
+
+# Increase volume
+"pamixer --increase 2; kill -44 $(pidof dwmblocks)"
+  XF86AudioRaiseVolume
+
+# Set volume to 100
+"pamixer --set-volume 100; kill -44 $(pidof dwmblocks)"
+  control+XF86AudioRaiseVolume
+
+# Decrease volume
+"pamixer --decrease 2; kill -44 $(pidof dwmblocks)"
+  XF86AudioLowerVolume
+
+# Toggle output mute
+"pamixer --toggle-mute; kill -44 $(pidof dwmblocks)"
+  XF86AudioMute
+
+# Increase mic volume
+"pamixer --default-source --increase 2; kill -45 $(pidof dwmblocks)"
+  shift+XF86AudioRaiseVolume
+
+# Set mic volume to 20
+"pamixer --default-source --set-volume 20; kill -45 $(pidof dwmblocks)"
+  control+shift+XF86AudioRaiseVolume
+
+# Decrease mic volume
+"pamixer --default-source --decrease 2; kill -45 $(pidof dwmblocks)"
+  shift+XF86AudioLowerVolume
+
+# Toggle mic mute
+"pamixer --default-source --toggle-mute; kill -45 $(pidof dwmblocks)"
+  shift+XF86AudioMute
+
+###################################
+# Requires Xorg (xorg-xbacklight) #
+###################################
+
+# Brightness up
+"xbacklight -inc 10"
+  XF86MonBrightnessUp
+
+# Brightness down
+"xbacklight -dec 10"
+  XF86MonBrightnessDown
+
+####################
+# Spotify Keybinds #
+####################
+
+# Play/Pause
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+  XF86AudioPlay
+
+# Forward
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+  XF86AudioNext
+
+# Back
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+  XF86AudioPrev
+
+##############
+# Screenshot #
+##############
+"maim -s | xclip -selection clipboard -t "image/png""
+  Mod4+shift+s
+
+##################################
+# End of xbindkeys configuration #
+##################################

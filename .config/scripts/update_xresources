@@ -1,0 +1,21 @@
+#!/bin/sh
+if [ $# -lt 1 ]; then
+	echo "Please input an image file xoxo"
+	exit 1
+fi
+
+if [ ! -f $1 ]; then
+	echo "Input file does not exist"
+	exit 1
+fi
+
+wal -i $1
+
+xrdb -edit ~/.config/.Xresources
+rm ~/.config/.Xresources.bak
+
+#TODO: implement something that changes the dwm border xresources:
+#	dwm.normborder -> color1
+#	dwm.selborder -> color9
+#	dmenu.selbackground -> color9
+spicetify update
