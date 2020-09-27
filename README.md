@@ -6,7 +6,15 @@ Includes settings for:
 * nvim
 * picom/compton
 * zsh
-* 
+* spicetify
+* picom
+* neofetch
+* zathura
+* emacs
+* gtk 2 and 3
+* xbindkeys
+* npm
+
 ## Suckless
 
 My setup includes some modified tools by the [suckless](https://suckless.org/), these are:
