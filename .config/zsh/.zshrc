@@ -122,3 +122,10 @@ alias feh="feh --conversion-timeout 1"
 alias בג=cd
 alias ךד=ls
 alias בךקשר=clear
+
+# make dir and cd
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
