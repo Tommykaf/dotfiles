@@ -96,7 +96,8 @@ let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-java',
 \ 'coc-pairs',
-\ 'coc-ultisnips'
+\ 'coc-ultisnips',
+\ 'coc-clangd'
 \ ]
 " Search
 set incsearch
