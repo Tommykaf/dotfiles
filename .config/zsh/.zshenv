@@ -20,7 +20,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Wget
-export WGETRC="$XDG_CONFIG_HOME"/wgetrc
+export WGETRC="$XDG_CONFIG_HOME"/wget/config
 
 # GTK 2
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtk
