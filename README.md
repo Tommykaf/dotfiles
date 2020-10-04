@@ -17,7 +17,7 @@ Includes settings for:
 
 ## Suckless
 
-My setup includes some modified tools by the [suckless](https://suckless.org/), these are:
+My setup includes some modified tools by the [suckless](https://suckless.org/) foundation, these are:
 * [dwm](https://github.com/Tommykaf/dwm) - window manager
 * [st](https://github.com/Tommykaf/st) - terminal emulator
 * [dmenu](https://github.com/Tommykaf/dmenu) - launcher thingy
