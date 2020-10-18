@@ -1,0 +1,52 @@
+#!/bin/sh
+
+
+# Loop through all attached batteries.
+for battery in /sys/class/power_supply/BAT?
+do
+	capacity=$(cat "$battery"/capacity 2>/dev/null) || break
+	status=$(cat "$battery"/status)
+
+	case $status in
+
+		[Dd]ischarging)
+			status=
+			;;
+		
+		[Ff]ull)
+			status=卵
+			;;
+
+		"[Nn]ot charging")
+			status=
+			;;
+		
+		[Cc]harging)
+			status=
+			;;
+		
+		[Uu]nknown)
+			status=
+			;;
+
+		*)
+			status=""
+			;;
+	esac
+
+	icon=""
+
+	if [ "$capacity" -le 10 ]; then
+		icon=
+	elif [ "$capacity" -le 25 ]; then
+		icon=
+	elif [ "$capacity" -le 50 ]; then
+		icon=
+	elif [ "$capacity" -le 75 ]; then
+		icon=
+	else
+		icon=
+	fi
+
+	echo "$icon  $status  $capacity%"
+done | sed 's/ *$//'

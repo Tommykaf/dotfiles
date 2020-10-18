@@ -1,0 +1,31 @@
+#!/bin/sh
+# note - my keyboard layout is defined by calling:
+# setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,il
+
+
+layout="$(xset -q | grep -i "led mask" | cut -c59-67)"
+
+case $layout in
+
+    "00000000")
+        KBD="EN"
+        ;;
+
+    "00000001")
+        KBD="EN ﰶ"
+        ;;
+
+    "00001004")
+        KBD="HE"
+        ;;
+
+    "00001005")
+        KBD="HE ﰶ"
+        ;;
+
+    *)
+        KBD="??"
+        ;;
+esac
+
+echo $KBD
