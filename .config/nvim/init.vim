@@ -34,6 +34,7 @@ Plug 'plasticboy/vim-markdown' " MD
 Plug 'latex-box-team/latex-box' " Latex
 Plug 'JuliaEditorSupport/julia-vim' " julia
 Plug 'vim-python/python-syntax' " Python
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'} " R lang cause statistics
 
 " Themes
 Plug 'marciomazza/vim-brogrammer-theme' " Brogrammer theme
