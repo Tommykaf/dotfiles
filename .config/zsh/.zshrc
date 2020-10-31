@@ -129,3 +129,9 @@ mkcd ()
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
+
+# move to course directory
+cdc () 
+{
+    cd -P -- ~/limoodim/odyssey/"$1"
+}
