@@ -30,3 +30,6 @@ export PATH=$PATH:$HOME/.emacs.d/bin
 
 # pip scripts
 export PATH=$PATH:$HOME/.local/bin
+
+# java apps fix
+export _JAVA_AWT_WM_NONREPARENTING=1

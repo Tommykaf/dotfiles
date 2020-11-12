@@ -130,8 +130,8 @@ mkcd ()
     cd -P -- "$1"
 }
 
-# move to course directory
-cdc () 
-{
-    cd -P -- ~/limoodim/odyssey/"$1"
-}
+# Directory alias
+hash -d l=~/limoodim
+hash -d o=~/limoodim/odyssey
+hash -d c=~/coding
+
